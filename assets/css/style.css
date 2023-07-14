@@ -2425,3 +2425,25 @@ section {
   text-align: center;
   font-size: 13px;
 }
+
+@media only screen and (max-device-width: 480px) {
+  #hero {
+    display: none !important;
+  }
+
+  .hero-content {
+    height: 50vh !important;
+    padding-top: 0;
+    margin-top: 5vh !important;
+    margin-bottom: 5vh !important;
+
+    background: url(../img/cover-3.jpg) center center no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-content iframe{
+    height: 200px !important;
+  }
+}
