@@ -44,6 +44,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="#products"> Products </a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
@@ -74,7 +75,7 @@
             <header class="section-header justify-content-center">
               <br>
               <br>
-              <p> Myanamr Honey Food </p>
+              <p> Myanmar Honey Food </p>
             </header>
 
             <iframe style="width: 100%;" height="490" src="https://www.youtube.com/embed/LgaR_oyF0As"
@@ -82,10 +83,6 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
 
-            <!-- <iframe style="width: 100%;" height="450" src="https://www.youtube.com/embed/qD1kP_nJU3o?autoplay=1"
-              title="IVE 아이브 &#39;WAVE&#39; MV" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe> -->
           </div>
         </div>
       </div>
@@ -102,7 +99,7 @@
           <h2> Products </h2>
           <p> Product Catalog </p>
         </header>
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
@@ -111,131 +108,19 @@
               <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
-        </div>
+        </div> -->
 
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-3 col-md-4 col-6 portfolio-item filter-app" v-for="product in products">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img v-bind:src="product.cover" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4> {{ product.itemName }} </h4>
+                <p> {{ product.itemType }} </p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a v-bind:href="'product-details.html?itemCode=' + product.itemCode" title="More Details">
+                    <i class="bi bi-link"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -381,20 +266,7 @@
               </div>
             </div>
             <div class="col-lg-6 d-flex align-items-center">
-
               <img style="width: 100%;" src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/factory-2.jpg">
-              <!-- <iframe
-                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmyanmarhoney888%2Fvideos%2F673554497165684%2F&show_text=true&width=560&t=0"
-                width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"></iframe>
-
-              <iframe
-                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmyanmarhoney888%2Fvideos%2F673554497165684%2F&show_text=false&width=560&t=0"
-                width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"></iframe> -->
-
             </div>
           </div>
         </div>
@@ -412,39 +284,51 @@
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/city-mart.png"
-                class="img-fluid" alt="">
+                class="img-fluid" alt="City Mart Logo">
             </div>
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/marketplace.png"
-                class="img-fluid" alt="">
+                class="img-fluid" alt="Market Place Logo">
             </div>
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/makro__logo-1.png"
-                class="img-fluid" alt="">
+                class="img-fluid" alt="Makro Logo">
             </div>
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/ocean.png" class="img-fluid"
-                alt="">
+                alt="Ocean Logo">
             </div>
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/seingayhar.jpg"
-                class="img-fluid" alt="">
+                class="img-fluid" alt="Sein Gay Har Logo">
             </div>
-            <!-- <div class="swiper-slide">
-              <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/seingayhar.jpg"
-                class="img-fluid" alt="">
-            </div> -->
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/abc-con-store.png"
-                class="img-fluid" alt="">
+                class="img-fluid" alt="ABC Convience Store Logo">
             </div>
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/ga-mone-pwint.png"
-                class="img-fluid" alt="">
+                class="img-fluid" alt="Ga Mone Pwint Logo">
             </div>
             <div class="swiper-slide">
               <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/one-stop.jpeg"
-                class="img-fluid" alt="">
+                class="img-fluid" alt="One Stop Mart Logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/easy-mart.png"
+                class="img-fluid" alt="Easy Mart Logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/shop-com-mm -1.png"
+                class="img-fluid" alt="Shop.com Logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/zay-chin.jpeg"
+                class="img-fluid" alt="Zay Chin Mart Logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/partners/aeon-orange.jpeg"
+                class="img-fluid" alt="Aeon Orange Logo">
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -580,16 +464,188 @@
     const {
       createApp,
       ref
-    } = Vue
+    } = Vue;
+    let products = ref([{
+        itemName: "Shrimp Rolls",
+        itemCode: "shrimp_rolls",
+        itemType: "Ready Made",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/shrimp_rolls.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/shrimp_rolls.jpg"]
+      }, {
+        itemName: "Sour & Spicy Shrimp Rolls",
+        itemCode: "sour_spicy_shrimp_rolls",
+        itemType: "Ready Made",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/sour-shrimp-roll.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/sour-shrimp-roll.jpg"]
+      }, {
+        itemName: "Seaweed Rolls",
+        itemCode: "seaweed_rolls",
+        itemType: "Ready Made",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/seaweed-rolls.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/seaweed-rolls.jpg"]
+      }, {
+        itemName: "Garlic Chicken Rolls",
+        itemCode: "garlic_chicken_rolls",
+        itemType: "Ready Made",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/garlic-onion-rolls.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/garlic-onion-rolls.jpg"]
+      }, {
+        itemName: "Onion Cheese Rolls",
+        itemCode: "onion_cheese_rolls",
+        itemType: "Ready Made",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/cheese_rolls-min.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/cheese_rolls-min.jpg"]
+      },
+      {
+        itemName: "Spicy Beef Rolls",
+        itemCode: "spicy_beef_rolls",
+        itemType: "Ready Made",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/spicy-beef-rolls-min.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/spicy-beef-rolls-min.jpg"]
+      },
+      {
+        itemName: "Curry Beef Rolls",
+        itemCode: "curry_beef_rolls",
+        itemType: "Ready Made",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/curry-beef-rolls-min.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/curry-beef-rolls-min.jpg"]
+      },
+      {
+        itemName: "Spring Roll Sheet",
+        itemCode: "spring_roll_sheet",
+        itemType: "Frozen Rolls",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/roll-sheet.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/roll-sheet.jpg"]
+      },
+
+      {
+        itemName: "Small Prawn Rolls",
+        itemCode: "small_prawn_rolls",
+        itemType: "Frozen Rolls",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/prawn-roll.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/prawn-roll.jpg"]
+      },
+      {
+        itemName: "Seaweed Rolls",
+        itemCode: "seaweed_rolls",
+        itemType: "Frozen Rolls",
+        cover: "assets/img/portfolio/portfolio-1.jpg",
+        images: ["assets/img/portfolio/portfolio-1.jpg"]
+      },
+      {
+        itemName: "Milk Banana Rolls",
+        itemCode: "milk_banana_rolls",
+        itemType: "Frozen Rolls",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/milk-banana-roll.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/milk-banana-roll.jpg"]
+      },
+      {
+        itemName: "Butter Corn Rolls",
+        itemCode: "butter_corn_rolls",
+        itemType: "Frozen Rolls",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/butter-corn-mon.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/butter-corn-mon.jpg"]
+      },
+      {
+        itemName: "Quail Egg Rolls",
+        itemCode: "quail_egg_rolls",
+        itemType: "Frozen Rolls",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/quail-egg-min.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/quail-egg-min.jpg"]
+      },
+      {
+        itemName: "Prawn Rolls",
+        itemCode: "prawn_rolls",
+        itemType: "Frozen Rolls",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/prawn-roll-big.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/prawn-roll-big.jpg"]
+      },
+      {
+        itemName: "Chicken Rolls",
+        itemCode: "chicken_rolls",
+        itemType: "Frozen Rolls",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/chicken-rolls.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/chicken-rolls.jpg"]
+      },
+      {
+        itemName: "Vegetable Rolls",
+        itemCode: "vegatable_rolls",
+        itemType: "Frozen Rolls",
+        cover: "assets/img/portfolio/portfolio-1.jpg",
+        images: ["assets/img/portfolio/portfolio-1.jpg"]
+      },
+      // {
+      //   itemName: "Pork Rolls",
+      //   itemCode: "pork_rolls",
+      //   itemType: "Frozen Rolls",
+      //   cover: "assets/img/portfolio/portfolio-1.jpg",
+      //   images: ["assets/img/portfolio/portfolio-1.jpg"]
+      // },
+
+
+      {
+        itemName: "Chicken Samosa",
+        itemCode: "chicken_samosa",
+        itemType: "Frozen Samosa",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/chicken-samosa-min.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/chicken-samosa-min.jpg"]
+      },
+      {
+        itemName: "Potato Samosa",
+        itemCode: "potato_samosa",
+        itemType: "Frozen Samosa",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/potato-samosa.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/potato-samosa.jpg"]
+      },
+      {
+        itemName: "Banana Samosa",
+        itemCode: "banana_samosa",
+        itemType: "Frozen Samosa",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/banana-samosa.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/banana-samosa.jpg"]
+      },
+
+      {
+        itemName: "Paratha",
+        itemCode: "paratha",
+        itemType: "Frozen Paratha",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/paratha.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/paratha.jpg"]
+      },
+      {
+        itemName: "Scallion Paratha",
+        itemCode: "scallion_paratha",
+        itemType: "Frozen Paratha",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/scallion-paratha.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/scallion-paratha.jpg"]
+      },
+      {
+        itemName: "Prawn Dumpling",
+        itemCode: "prawn_dumpling",
+        itemType: "Frozen Dumpling",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/prawn-dumpling.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/prawn-dumpling.jpg"]
+      },
+      // {
+      //   itemName: "Pork Dumpling",
+      //   itemCode: "pork_dumpling",
+      //   itemType: "Frozen Dumpling",
+      //   cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/pork-dumpling.jpg",
+      //   images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/pork-dumpling.jpg"]
+      // },
+      {
+        itemName: "Tone Tone Man Tou",
+        itemCode: "tone_tone_man_tou",
+        itemType: "Frozen Tou",
+        cover: "https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/tao.jpg",
+        images: ["https://myanmar-honey-food.s3.ap-southeast-1.amazonaws.com/products/tao.jpg"]
+      },
+
+    ])
     createApp({
       setup() {
         return {
-          products: [{
-            itemName: "",
-            itemId: "",
-            cover: "",
-            images: []
-          }]
+          products: products
         }
       }
     }).mount('#app')
