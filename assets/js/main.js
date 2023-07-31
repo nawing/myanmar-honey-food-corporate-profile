@@ -5,11 +5,13 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function () {
+(() => {
   "use strict";
-
   /**
-   * Easy selector helper function
+   * select
+   * @param {*} el
+   * @param {*} all
+   * @returns
    */
   const select = (el, all = false) => {
     el = el.trim()
@@ -19,9 +21,12 @@
       return document.querySelector(el)
     }
   }
-
   /**
-   * Easy event listener function
+   * on
+   * @param {*} type
+   * @param {*} el
+   * @param {*} listener
+   * @param {*} all
    */
   const on = (type, el, listener, all = false) => {
     if (all) {
@@ -30,16 +35,16 @@
       select(el, all).addEventListener(type, listener)
     }
   }
-
   /**
-   * Easy on scroll event listener
+   * onscroll
+   * @param {*} el
+   * @param {*} listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
-
   /**
-   * Navbar links active state on scroll
+   *
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
@@ -57,41 +62,22 @@
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
-
   /**
-   * Scrolls to an element with header offset
+   * scrollto
+   * @param {*} el
    */
   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight
-
     if (!header.classList.contains('header-scrolled')) {
       offset -= 10
     }
-
     let elementPos = select(el).offsetTop
     window.scrollTo({
       top: elementPos - offset,
       behavior: 'smooth'
     })
   }
-
-  // /**
-  //  * Toggle .header-scrolled class to #header when page is scrolled
-  //  */
-  // let selectHeader = select('#header')
-  // if (selectHeader) {
-  //   const headerScrolled = () => {
-  //     if (window.scrollY > 100) {
-  //       selectHeader.classList.add('header-scrolled')
-  //     } else {
-  //       selectHeader.classList.remove('header-scrolled')
-  //     }
-  //   }
-  //   window.addEventListener('load', headerScrolled)
-  //   onscroll(document, headerScrolled)
-  // }
-
   /**
    * Back to top button
    */
@@ -107,7 +93,6 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-
   /**
    * Mobile nav toggle
    */
@@ -116,7 +101,6 @@
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
-
   /**
    * Mobile nav dropdowns activate
    */
@@ -126,14 +110,12 @@
       this.nextElementSibling.classList.toggle('dropdown-active')
     }
   }, true)
-
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
   on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
-
       let navbar = select('#navbar')
       if (navbar.classList.contains('navbar-mobile')) {
         navbar.classList.remove('navbar-mobile')
@@ -144,18 +126,16 @@
       scrollto(this.hash)
     }
   }, true)
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
-
+  // /**
+  //  * Scroll with ofset on page load with hash links in the url
+  //  */
+  // window.addEventListener('load', () => {
+  //   if (window.location.hash) {
+  //     if (select(window.location.hash)) {
+  //       scrollto(window.location.hash)
+  //     }
+  //   }
+  // });
   /**
    * Clients Slider
    */
@@ -202,9 +182,7 @@
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
       });
-
       let portfolioFilters = select('#portfolio-flters li', true);
-
       on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
         portfolioFilters.forEach(function (el) {
@@ -218,16 +196,13 @@
         aos_init();
       }, true);
     }
-
   });
-
   /**
    * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfokio-lightbox'
   });
-
   /**
    * Portfolio details slider
    */
@@ -243,7 +218,6 @@
       clickable: true
     }
   });
-
   /**
    * Testimonials slider
    */
@@ -261,14 +235,8 @@
       clickable: true
     },
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      },
-
-      1200: {
-        slidesPerView: 3,
-      }
+      320: { slidesPerView: 1, spaceBetween: 40 },
+      1200: { slidesPerView: 3, }
     }
   });
 
