@@ -2426,6 +2426,13 @@ section {
   font-size: 13px;
 }
 
+.cover-video iframe{
+  text-align: center !important;
+  margin: auto !important;
+  width: 100% !important;
+  height: 500px !important;
+}
+
 @media only screen and (max-device-width: 480px) {
   #hero {
     display: none !important;
@@ -2444,6 +2451,13 @@ section {
   }
 
   .hero-content iframe{
+    width: 100% !important;
     height: 200px !important;
   }
+}
+
+.cover-video {
+  width: 100% !important;
+  z-index: 9999999 !important;
+  position: relative !important;
 }
