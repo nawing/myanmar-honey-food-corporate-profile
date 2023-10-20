@@ -42,6 +42,8 @@
           <li><a class="nav-link scrollto" href="/#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="/#about">About</a></li>
           <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" target="_blank"
+              href="https://www.shop.com.mm/shop/myanmar-honey-food/">Shop</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -65,30 +67,7 @@
       <div class="container">
 
         <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="portfolio-info">
-              <h3> {{ product.itemName }} </h3>
-              <div v-html="product.itemDescription"></div>
 
-
-              <div class="row">
-                <div class="col-md-12">
-                  <hr>
-                  <p> Order Our Products Here </p>
-                </div>
-                <div class="col-md-12">
-                  <a style="margin-right: 16px;" class="btn btn-primary"
-                    href="https://www.facebook.com/myanmarhoney888">
-                    Facebook </a>
-                  <a style="margin-right: 16px;" class="btn btn-primary" href="tel:+95 9 788957588">
-                    +95 9
-                    788957588 </a>
-                  <a style="margin-right: 16px;" class="btn btn-primary" href="tel:+95 9 255940588"> +95 9
-                    255940588 </a>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-lg-6">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
@@ -99,6 +78,38 @@
               <div class="swiper-pagination"></div>
             </div>
           </div>
+
+
+          <div class="col-lg-6">
+            <div class="portfolio-info">
+              <h3> {{ product.itemName }} </h3>
+              <div v-html="product.itemDescription"></div>
+              <div class="row">
+                <div class="col-md-12">
+                  <hr>
+                  <p> Order Our Products Here </p>
+                </div>
+                <div class="col-md-12">
+                  <a style="margin-right: 16px;" class="btn btn-primary" target="_blank"
+                    href="https://www.facebook.com/myanmarhoney888">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a style="margin-right: 16px;" class="btn btn-primary" href="tel:+95 9 788957588">
+                    <i class="bi bi-telephone"></i>
+                  </a>
+                  <a style="margin-right: 16px;" class="btn btn-primary" href="tel:+95 9 255940588">
+                    <i class="bi bi-telephone"></i>
+                  </a>
+                  <a style="margin-right: 16px;" class="btn btn-primary" target="_blank"
+                    href="https://www.shop.com.mm/shop/myanmar-honey-food">
+                    <i class="bi bi-shop"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
 
       </div>
@@ -114,13 +125,28 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <p> Myanmar Honey Food Factory Co.,Ltd </p>
+            <h6> Myanmar Honey Food Factory Co.,Ltd </h6>
+            <p>
+              Myanmar Honey Food Factory Co.,LTD produce our main products, spring rolls, with experienced Taiwanese
+              technique which has been well-known for more than 50 years. Every piece of Myanmar Honey Ready-made Fried
+              Spring roll is fully handmade. In 2011, the production line relocated in East Dagon Industrial Zone,
+              Yangon, Myanmar and started to penetrate the Myanmar market in 2013. Based on the rich resources of
+              Myanmar, our ingredients are guaranteed to be fresh and healthy to produce quality food.
+            </p>
             <p> </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/myanmarhoney888" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a target="_blank" href="https://www.facebook.com/myanmarhoney888" class="facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="tel:+95 9 788957588" class="facebook">
+                <i class="bi bi-telephone"></i>
+              </a>
+              <a href="tel:+95 9 255940588" class="facebook">
+                <i class="bi bi-telephone"></i>
+              </a>
+              <a target="_blank" href="https://www.shop.com.mm/shop/myanmar-honey-food" class="instagram">
+                <i class="bi bi-shop"></i>
+              </a>
             </div>
           </div>
           <div class="col-lg-2 col-6 footer-links"> </div>
@@ -142,7 +168,7 @@
         &copy; <strong><span> Myanmar Honey Food Factory Co.,Ltd </span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Powered by <a href="https://nawing.github.io/"> wss://nawing </a>
+        Powered by <a href="https://nawing.github.io/"> Naw Ing </a>
       </div>
     </div>
   </footer>
